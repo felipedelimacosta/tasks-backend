@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages{
 
-        stage('Just Test'){
+        stage('Build BackEnd'){
             steps{
-                sh 'echo deu certo!!!'
+                sh 'mvn clean packge -DskipTests=true'
             }
         }
     }
